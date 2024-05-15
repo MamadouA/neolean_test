@@ -1,0 +1,37 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+    <form action="#">
+     <div class="form-row">
+         <div class="col">
+           <input type="text" class="form-control" id="keyword" placeholder="Rechercher par mot clef" name="keyword">
+         </div>
+         <div class="col-2">
+             <button type="submit" class="btn btn-block bg-primary text-white">Rechercher</button>
+         </div>
+       </div>
+    </form>
+
+    <h2 *ngIf="!entries" id="emptyJournal" class="text-danger">
+        Votre journal est vide!
+    </h2>
+
+    <div>
+         <table *ngIf="entries.length" class="table table-expend-sm table-hover">
+             <tr>
+                 <th><a href="#">Date</a></th>
+                 <th><a href="#">Titre</a></th>
+                 <th><a href="#">Description</a></th>
+                 <th>Modifier</th>
+                 <th>Supprimer</th>
+            </tr>
+             <tr *ngFor="let entry of entries">
+                 <td>{{entry.date}}</td>
+                 <td>{{entry.titre}}</td>
+                 <td>{{entry.description}}</td>
+                 <td><a href="/edit/{{entry.id}}"><img class="imgs" src="/assets/images/edit.png"alt=""></a></td>
+                 <td><a href="journal" (click)="deleteEntry(entry.id)"><img class="imgs" src="/assets/images/delete.png" alt=""></a></td>
+             </tr>
+         </table>
+    </div>
+ </div>

@@ -1,0 +1,32 @@
+.imgs {
+    width: 30px;
+    height: 30px;
+    padding: 7px;
+}
+
+.imgs:hover {
+    background-color: rgb(167, 186, 201);
+    border: 1px solid rgb(167, 186, 201);
+    border-radius: 20px;
+}
+
+#emptyJournal {
+    text-align: center;
+    margin-top: 70px;
+    animation-name: showEmptyJournalTag;
+    animation-duration: 5s;
+}
+
+@keyframes showEmptyJournalTag {
+    from   {opacity: 0%;}
+    to  {opacity: 100%;}
+}
+
+.alert {
+    position: absolute;
+    top: 0;
+    left: 450px;
+    margin: auto;
+}
+
+

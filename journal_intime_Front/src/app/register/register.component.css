@@ -1,0 +1,30 @@
+body {
+    margin: 0px;
+    background-color: #111b20;
+}
+
+#myForm {
+    width: 40%;
+    margin: 50px auto;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px 20px;
+    box-shadow: 3px 3px 12px rgb(36, 34, 34);
+}
+
+#seConnecter {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+    text-decoration: underline;
+}
+
+button[type='submit'] {
+    margin: auto;
+    width: 80%;
+}
+
+button[type='submit']:hover {
+    width: 79%;
+}
